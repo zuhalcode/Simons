@@ -45,7 +45,7 @@
                         
 						<div class="form-outline mb-5">
 							<label class="form-label text-dark" for="answer">Jawaban</label>
-							<select class="form-select" name="answer" id="">
+							<select class="form-select" name="answer" id="answer">
                                 <option value="a">A</option>
                                 <option value="b">B</option>
                                 <option value="c">C</option>
