@@ -9,11 +9,14 @@
             <div class="col-sm-12">
                 <div class="white-box">
                     <h3 class="box-title">List Soal</h3>
-                    <a href="/dashboard/quest" class="text-white btn btn-primary">Tambah Soal Baru</a>
+
+                    @if(session()->has('success')) <div class="alert alert-success">{{ session('success') }}</div>@endif
+
+                    <a href="/quest/create" class="text-white btn btn-primary">Tambah Soal Baru</a>
                     <div class="table-responsive">
                         <table class="table ">
                             <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th class="border-top-0">#</th>
                                     <th class="border-top-0">Soal</th>
                                     <th class="border-top-0">A</th>
@@ -23,14 +26,16 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($questions as $question)
                                 <tr>
-                                    <td>1</td>
-                                    <td>Anda berjalan dengan kecepatan kurang lebih 30 km/jam mendekati persimpangan yang diatur oleh lampu lalu lintas. Ketika lampu berupbah dari warna hijau ke kuning, apa yang anda lakukan.</td>
-                                    <td>Berhenti</td>
-                                    <td>Jalan terus</td>
-                                    <td>Bersiap-siap berhenti karena belum melewati garis berhenti </td>
-                                    <td>C</td>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $question->question }}</td>
+                                    <td>{{ $question->a }}</td>
+                                    <td>{{ $question->b }}</td>
+                                    <td >{{ $question->c }}</td>
+                                    <td class=" text-center text-uppercase">{{ $question->answer }}</td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

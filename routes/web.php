@@ -17,7 +17,7 @@ use App\Http\Controllers\QuestionController;
 
 Route::get('/', fn() => view('home'));
 Route::get('/dashboard', fn() => view('dashboard.index'))->middleware('auth');
-// Route::get('/quest', fn() => view('dashboard.quest'))->middleware('auth');
+
 Route::resource('/quest', QuestionController::class)->middleware('auth');
 
 Route::controller(UserController::class)->group(fn() => [
@@ -27,8 +27,3 @@ Route::controller(UserController::class)->group(fn() => [
     Route::post('/register', 'store'),
     Route::post('/logout', 'logout'),
 ]);
-
-// Route::controller(DashboardController::class)->group(fn() => [
-//     Route::get('/dashboard', fn() => view('dashboard.index'))->middleware('auth'),
-//     Route::get('/quest', fn() => view('dashboard.quest'))->middleware('auth'),
-// ]);

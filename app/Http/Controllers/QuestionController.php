@@ -14,7 +14,10 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        return view('dashboard.quest');
+
+        return view('dashboard.quests.index', [
+            'questions' => Question::all()
+        ]);
     }
 
     /**
@@ -24,7 +27,7 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.quests.create');
     }
 
     /**
@@ -33,9 +36,19 @@ class QuestionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $req)
     {
-        //
+        $validatedData = $req->validate([
+            'question' => 'required|max:255',
+            'a' => 'required|max:255',
+            'b' => 'required|max:255',
+            'c' => 'required|max:255',
+        ]);
+
+        $validatedData['answer'] = $req->answer;
+
+        Question::create($validatedData);
+        return redirect('/quest')->with('success', 'Soal baru berhasil ditambahkan');
     }
 
     /**
