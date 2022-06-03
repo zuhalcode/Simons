@@ -10,7 +10,7 @@
 						<br>
 						<span class="text-warning">#dirumahaja</span>
 					</h1>
-					<a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="service.html">Daftar Sekarang</a>
+					<a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-primary" href="service.html">DAFTAR SEKARANG</a>
 				</div>
 			</div>
 		</div>
@@ -24,12 +24,12 @@
 						<br> 
 						Surat Izin Mengemudi
 					</h1>
-					<a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8"  class="btn btn-main" href="service.html">Daftar Sekarang</a>
+					<a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8"  class="btn btn-primary text-uppercase" href="#">DAFTAR SEKARANG</a>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</div> 
 
 <!--
 Start About Section

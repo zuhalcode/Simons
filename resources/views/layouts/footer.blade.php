@@ -3,6 +3,7 @@
       =====================================-->
       <!-- Main jQuery -->
       <script src="/plugins/jquery/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
       <!-- Google Map -->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
       <script  src="/plugins/google-map/gmap.js"></script>

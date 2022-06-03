@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/logo .png" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
   
   <!-- CSS
   ================================================== -->
@@ -27,8 +27,11 @@
   <link rel="stylesheet" href="/plugins/animate/animate.css">
   <!-- Slick Carousel -->
   <link rel="stylesheet" href="/plugins/slick/slick.css">
+  <link rel="stylesheet" href="/plugins/fontawesome/css/all.min.css">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="/css/style.css">  
+  <link rel="stylesheet" href="/css/style2.css">  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">  
 
 </head>
 

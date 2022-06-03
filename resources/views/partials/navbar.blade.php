@@ -22,7 +22,7 @@ Fixed Navigation
               <a class="nav-link" href="/">Home</a>
             </li>
             
-            <li class="nav-item dropdown active">
+            <li class="nav-item dropdown ">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Layanan
@@ -38,6 +38,29 @@ Fixed Navigation
             <li class="nav-item ">
               <a class="nav-link" href="contact.html">Kontak</a>
             </li>
+            @auth
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  {{ auth()->user()->name }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/dashboard">Dashboard</a>
+                  <form action="/logout" method="post">
+                    @csrf
+                    <button class="dropdown-item" type="submit">Logout</button>
+                  </form>
+                </div>
+              </li>
+            @else
+              <li class="nav-item ">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/register">Register</a>
+              </li>
+            @endauth
+           
           </ul>
         </div>
       </nav>
