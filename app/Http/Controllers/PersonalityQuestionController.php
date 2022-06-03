@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\PersonalityQuestion;
-use App\Models\Question;
 use Illuminate\Http\Request;
 
-class QuestionController extends Controller
+class PersonalityQuestionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        return view('dashboard.quests.index', [
-            'questions' => Question::all()
+        return view('dashboard.personalities.index',[
+            'questions' => PersonalityQuestion::all()
         ]);
     }
 
@@ -27,7 +26,7 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        return view('dashboard.quests.create');
+        return view('dashboard.personalities.create');
     }
 
     /**
@@ -40,24 +39,19 @@ class QuestionController extends Controller
     {
         $validatedData = $req->validate([
             'question' => 'required|max:255',
-            'a' => 'required|max:255',
-            'b' => 'required|max:255',
-            'c' => 'required|max:255',
         ]);
 
-        $validatedData['answer'] = $req->answer;
-
-        Question::create($validatedData);
-        return redirect('/quest')->with('success', 'Soal baru berhasil ditambahkan');
+        PersonalityQuestion::create($validatedData);
+        return redirect('/personality')->with('success', 'Soal baru berhasil ditambahkan');
     }
-    
+
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Question  $question
+     * @param  \App\Models\PersonalityQuestion  $personalityQuestion
      * @return \Illuminate\Http\Response
      */
-    public function show(Question $question)
+    public function show(PersonalityQuestion $personalityQuestion)
     {
         //
     }
@@ -65,10 +59,10 @@ class QuestionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Question  $question
+     * @param  \App\Models\PersonalityQuestion  $personalityQuestion
      * @return \Illuminate\Http\Response
      */
-    public function edit(Question $question)
+    public function edit(PersonalityQuestion $personalityQuestion)
     {
         //
     }
@@ -77,10 +71,10 @@ class QuestionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Question  $question
+     * @param  \App\Models\PersonalityQuestion  $personalityQuestion
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Question $question)
+    public function update(Request $request, PersonalityQuestion $personalityQuestion)
     {
         //
     }
@@ -88,10 +82,10 @@ class QuestionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Question  $question
+     * @param  \App\Models\PersonalityQuestion  $personalityQuestion
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Question $question)
+    public function destroy(PersonalityQuestion $personalityQuestion)
     {
         //
     }

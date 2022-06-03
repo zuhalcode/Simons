@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\PersonalityQuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,8 @@ Route::get('/', fn() => view('home'));
 Route::get('/dashboard', fn() => view('dashboard.index'))->middleware('auth');
 
 Route::resource('/quest', QuestionController::class)->middleware('auth');
+Route::resource('/personality', PersonalityQuestionController::class)->middleware('auth');
+
 
 Route::controller(UserController::class)->group(fn() => [
     Route::get('/login', 'index')->middleware('guest')->name('login'),

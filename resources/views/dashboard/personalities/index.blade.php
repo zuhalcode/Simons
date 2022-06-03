@@ -8,22 +8,18 @@
         <div class="page-breadcrumb bg-white">
             <div class="col-sm-12">
                 <div class="white-box">
-                    <h3 class="box-title">List Soal Teori</h3>
+                    <h3 class="box-title">List Soal Kepribadian</h3>
 
                     @if(session()->has('success')) <div class="alert alert-success">{{ session('success') }}</div>@endif
 
-                    <a href="/quest/create" class="text-white btn btn-primary">Tambah Soal Baru</a>
-                    <a href="/personality" class="text-white btn btn-primary">List Soal Kepribadian</a>
+                    <a href="/personality/create" class="text-white btn btn-primary">Tambah Soal Baru</a>
+                    <a href="/quest" class="text-white btn btn-primary">List Soal Teori</a>
                     <div class="table-responsive">
                         <table class="table ">
                             <thead>
-                                <tr class="text-center">
+                                <tr class="">
                                     <th class="border-top-0">#</th>
                                     <th class="border-top-0">Soal</th>
-                                    <th class="border-top-0">A</th>
-                                    <th class="border-top-0">B</th>
-                                    <th class="border-top-0">C</th>
-                                    <th class="border-top-0">Jawaban</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -31,10 +27,6 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $question->question }}</td>
-                                    <td>{{ $question->a }}</td>
-                                    <td>{{ $question->b }}</td>
-                                    <td >{{ $question->c }}</td>
-                                    <td class=" text-center text-uppercase">{{ $question->answer }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>

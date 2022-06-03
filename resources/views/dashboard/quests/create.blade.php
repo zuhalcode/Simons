@@ -52,15 +52,8 @@
                             </select>
 						</div>
 
-						<div class="form-outline mb-5">
-							<label class="form-label text-dark" for="answer">Jenis Soal</label>
-							<select class="form-select" name="answer" id="">
-                                <option value="kepribadian">Kepribadian</option>
-                                <option value="teori">Teori</option>
-                            </select>
-						</div>
-
                         <button type="submit" class="text-white btn btn-primary w-50 text-bold text-uppercase">Tambah Soal Baru</button>
+					</form>
                 </div>
             </div>
         </div>

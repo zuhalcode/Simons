@@ -17,7 +17,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link {{ Request::is('quest*') ? 'active' : '' }} waves-effect waves-dark sidebar-link" href="/quest"
+                            <a class="sidebar-link {{ Request::is('quest*') || Request::is('personality*') ? 'active' : '' }} waves-effect waves-dark sidebar-link" href="/quest"
                                 aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
                                 <span class="hide-menu">List Soal</span>
