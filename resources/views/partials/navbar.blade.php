@@ -1,14 +1,14 @@
 <!--
 Fixed Navigation
 ==================================== -->
-<header class="navigation fixed-top">
+<header class="navigation {{ Request::is('new-applicant*') ? '' : 'fixed-top' }} ">
     <div class="container">
       <!-- main nav -->
       <nav class="navbar navbar-expand-lg navbar-light">
         <!-- logo -->
-        <a class="navbar-brand logo" href="index.html">
-          <img class="logo-default" src="images/logo.png" alt="logo"/>
-          <img class="logo-white" src="images/logo-white.png" alt="logo"/>
+        <a class="navbar-brand logo" href="/">
+          <img class="logo-default" src="{{ asset("images/logo.png") }}" alt="logo"/>
+          <img class="logo-white" src="{{ asset("images/logo-white.png") }}" alt="logo"/>
         </a>
         <!-- /logo -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
@@ -28,8 +28,8 @@ Fixed Navigation
                 Layanan
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="index.html">Pengajuan SIM Baru</a>
-                <a class="dropdown-item" href="onepage-text.html">Perpanjangan SIM</a>
+                <a class="dropdown-item" href="/new-applicant">Pengajuan SIM Baru</a>
+                <a class="dropdown-item" href="/perpanjangan-sim">Perpanjangan SIM</a>
               </div>
             </li>
             <li class="nav-item ">

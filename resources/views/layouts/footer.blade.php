@@ -27,4 +27,17 @@
       
       <!-- Custom js -->
       <script src="/js/script.js"></script>
-    </html>
+      <script src="webcam.min.js"></script>
+        <script type="text/javascript">
+            function configure() {
+                Webcam.set({
+                    width: 320,
+                    height: 240,
+                    image_format: "jpeg",
+                    jpeg_quality: 90,
+                });
+                Webcam.attach("#my_camera");
+            }
+        </script>
+</body>
+</html>

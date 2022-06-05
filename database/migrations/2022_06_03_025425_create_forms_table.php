@@ -17,11 +17,17 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('gender_id')->constrained();
-            $table->string('phone');
-            $table->string('religion');
-            $table->string('country');
-            $table->string('province');
-            $table->string('height');
+            // $table->string('birthday');
+            // $table->string('birthplace');
+            // $table->string('phone');
+            // $table->string('address');
+            // $table->string('province');
+            // $table->string('city');
+            // $table->string('type');
+            // $table->string('religion');
+            $table->string('gender');
+            // $table->string('education');
+            $table->string('job');
             $table->timestamps();
         });
     }
