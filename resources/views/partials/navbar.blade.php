@@ -45,7 +45,9 @@ Fixed Navigation
                   {{ auth()->user()->name }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/dashboard">Dashboard</a>
+                  @can('is_admin')
+                    <a class="dropdown-item" href="/dashboard">Dashboard</a>
+                  @endcan
                   <form action="/logout" method="post">
                     @csrf
                     <button class="dropdown-item" type="submit">Logout</button>

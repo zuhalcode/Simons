@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -18,7 +19,7 @@ use App\Http\Controllers\PersonalityQuestionController;
 */
 
 Route::get('/', fn() => view('home'));
-Route::get('/dashboard', fn() => view('dashboard.index'))->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
 Route::resource('/quest', QuestionController::class)->middleware('auth');
 

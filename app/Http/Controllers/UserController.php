@@ -28,7 +28,7 @@ class UserController extends Controller
 
         if(Auth::attempt($credentials)) {
             $req->session()->regenerate();
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/');
         }
 
 

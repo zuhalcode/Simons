@@ -8,17 +8,17 @@
                 @csrf
                 <div class="form-group">
                     <label for="name">Nama Lengkap</label>
-                    <input type="text" name="name" class="form-control" id="name" value="zuhal" readonly>
+                    <input type="text" name="name" class="form-control" id="name" value="{{ auth()->user()->name }}" readonly>
                 </div>
 
                 <div class="form-group">
                     <label for="InputEmail">Alamat Email</label>
-                    <input type="text" class="form-control" name="email" id="InputEmail" value="email" readonly>
+                    <input type="text" class="form-control" name="email" id="InputEmail" value="{{ auth()->user()->email }}" readonly>
                 </div>
 
                 <div class="form-group">
                     <label for="NIK">NIK</label>
-                    <input type="text" class="form-control" id="NIK" name="NIK" value="NIK" readonly>
+                    <input type="text" class="form-control" id="NIK" name="NIK" value="{{ auth()->user()->NIK }}" readonly>
                 </div>
 
                 <div class="form-group">
